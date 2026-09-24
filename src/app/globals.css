@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* Navy gelap sebagai warna utama brand */
+  --color-ink-50: #f4f6f9;
+  --color-ink-100: #e7ecf3;
+  --color-ink-200: #cbd6e4;
+  --color-ink-300: #a0b2c9;
+  --color-ink-400: #7089a9;
+  --color-ink-500: #4f6a8d;
+  --color-ink-600: #3d5474;
+  --color-ink-700: #33445d;
+  --color-ink-800: #2a3649;
+  --color-ink-900: #1b2432;
+  --color-ink-950: #0f1620;
+
+  /* Emas hangat sebagai warna aksen */
+  --color-gold-50: #fdf9ed;
+  --color-gold-100: #f9efcf;
+  --color-gold-200: #f2dc9c;
+  --color-gold-300: #e9c463;
+  --color-gold-400: #e0ad3c;
+  --color-gold-500: #d0901f;
+  --color-gold-600: #b67119;
+  --color-gold-700: #915316;
+  --color-gold-800: #784418;
+  --color-gold-900: #653a18;
+  --color-gold-950: #3b1e0a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--color-ink-900);
+  }
+
+  ::selection {
+    background-color: var(--color-gold-200);
+    color: var(--color-ink-950);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold-500);
+    outline-offset: 2px;
+  }
+}
+
+.container-page {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .container-page {
+    padding-inline: 2rem;
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
